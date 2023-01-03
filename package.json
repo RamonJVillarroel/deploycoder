@@ -1,15 +1,30 @@
 {
-  "name": "deploy",
+  "name": "procoder",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "node": "index.js"
+    "start-dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "knex": "^2.3.0",
+    "log4js": "^6.7.1",
+    "moment": "^2.29.4",
+    "mongoose": "^6.8.2",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.5.4",
+    "sqlite3": "^5.1.4"
   }
 }
