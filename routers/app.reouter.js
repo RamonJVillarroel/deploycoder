@@ -22,7 +22,7 @@ router.get('/profile', auth, async (req, res) => {
   const user = req.user;
   res.render('profile.ejs', { username: user.firstname });
 });
-router.post('/loginError', async(req,res)=>{
+router.get('/loginError',(req,res)=>{
  res.render('error.ejs')
 })
 
