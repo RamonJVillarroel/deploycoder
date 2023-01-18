@@ -25,7 +25,7 @@ const io = new SocketServer(httpServer);
 //const productsDB = new Products('products', dbConfig.mariaDB);
 //const messagesDB = new Messages("messages", dbConfig.sqlite)
 const session = require('express-session');
-const PORT = parseInt(process.argv[2]) || 8081;
+const PORT = parseInt(envConfig.PORT) || 8081;
 //const PORT = 8080
 const clusterMode = process.argv[3] === "CLUSTER";
 //Middlewares
