@@ -1,0 +1,6 @@
+2023-01-20T16:42:23.546Z [33mwarn[39m: [33mRoute not implemented: GET => /[39m
+2023-01-20T16:43:11.698Z [33mwarn[39m: [33mRoute not implemented: GET => /api/auth/register[39m
+2023-01-20T16:43:50.871Z [33mwarn[39m: [33mRoute not implemented: GET => /api[39m
+2023-01-20T16:45:09.390Z [33mwarn[39m: [33mRoute not implemented: GET => /api/auth/register[39m
+2023-01-20T16:51:59.690Z [33mwarn[39m: [33mRoute not implemented: GET => /api/auth/register[39m
+2023-01-20T16:52:03.050Z [33mwarn[39m: [33mRoute not implemented: GET => /[39m
