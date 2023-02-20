@@ -31,7 +31,7 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'Please enter a phone number']
   }
 })
-
+//
 // Encrypt password before saving a new user
 UserSchema.pre('save', async function (next) {
   const salt = await bcrypt.genSalt(10)

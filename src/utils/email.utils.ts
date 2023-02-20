@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 import envConfig from '../config'
 import logger from './logger.utils'
-
+//
 const sendEmail = async options => {
   const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
@@ -16,7 +16,7 @@ const sendEmail = async options => {
     from: '"CHBP Server" orrin89@ethereal.email',
     to: envConfig.ADMIN_EMAIL,
     subject: options.subject,
-    html: options.html
+    html: options.htmlc
   }
 
   const info = await transporter.sendMail(mailOptions)

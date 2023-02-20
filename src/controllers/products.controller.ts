@@ -45,7 +45,7 @@ class ProductsController {
     } catch (err) {
       next(err)
     }
-  }
+  }//
 
   async deleteProduct(req, res, next) {
     const { id } = req.params

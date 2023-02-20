@@ -4,7 +4,7 @@ import errorMiddleware from './middlewares/error.middleware'
 import apiRoutes from './routes/api.routes'
 import errorRoutes from './routes/error.routes'
 
-const app = express()
+const app = express()//
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))

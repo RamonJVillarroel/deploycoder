@@ -16,7 +16,7 @@ class AuthController {
         password,
         phone
       })
-
+//
       // Email to the admin with the register details
       const emailStyles = {
         card: 'border: 1px solid #ccc; padding: 12px; margin: 10px 0px; border-radius: 8px;',
