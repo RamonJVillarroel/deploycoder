@@ -12,5 +12,5 @@ module.exports = {
   ADMIN_EMAIL: process.env.ADMIN_EMAIL ||'',
   ADMIN_WHATSAPP: process.env.ADMIN_WHATSAPP||'',
   JWT_SECRET: process.env.JWT_SECRET,
-  JWT_EXPIRE: process.env.JWT_EXPIRE
+  JWT_EXPIRE: process.env.JWT_EXPIRE,
 }

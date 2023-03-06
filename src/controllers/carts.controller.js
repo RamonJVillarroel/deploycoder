@@ -1,8 +1,8 @@
 const {STATUS, succesResponse} = require('../utils/api.utils');
 const {HTTPError}= require('../utils/errors.utils');
-const sendEmail = require('../utils/email.utils');
-const sendSMS = require('../utils/sms.utils');
-const sendWhatsapp = require('../utils/whatsapp.utils');
+const {sendEmail} = require('../utils/email.utils');
+const {sendSMS} = require('../utils/sms.utils');
+const {sendWhatsapp} = require('../utils/whatsapp.utils');
 const CartsDAO = require('../models/daos/carts.dao');
 
 const cartsDAO = new CartsDAO()

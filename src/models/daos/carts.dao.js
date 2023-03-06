@@ -23,7 +23,7 @@ class CartsDAO extends MongoContainer {
 
     const productAlreadyInCart = await this.productExistsInCart(cartId, prodId)
 
-    let updatedCart
+    let updatedCart;
 
     if (productAlreadyInCart) {
       const cartProducts = await this.getProducts(cartId)

@@ -3,10 +3,13 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const envconfig = require('../../env.config')
 const Schema = mongoose.Schema;
+
+const fecha = new Date().toLocaleDateString();
 const UserSchema = new Schema({
     timestamp: {
         type: Date,
-        default: new Date().toLocaleString()
+        default: fecha,
+        require:[false]
     },
     fullName: {
         type: String,
@@ -47,7 +50,7 @@ UserSchema.methods.matchPasswords = async function (password) {
 
 UserSchema.methods.getSignedJwtToken = function () {
     return jwt.sign({ id: this._id }, envconfig.JWT_SECRET, {
-        expiresIn: envConfig.JWT_EXPIRE
+        expiresIn: envconfig.JWT_EXPIRE
     })
 }
 module.exports = UserSchema;

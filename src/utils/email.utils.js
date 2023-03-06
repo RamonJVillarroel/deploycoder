@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer')
 const envConfig = require('../env.config')
-const logger = require('../logger/logger')
+const {logger} = require('../logger/logger')
 
 const sendEmail = async options => {
   const transporter = nodemailer.createTransport({
@@ -13,7 +13,7 @@ const sendEmail = async options => {
   })
 
   const mailOptions = {
-    from: '"CHBP Server" orrin89@ethereal.email',
+    from: '"CHBP Server" heloise97@ethereal.email',
     to: envConfig.ADMIN_EMAIL,
     subject: options.subject,
     html: options.html
@@ -21,7 +21,7 @@ const sendEmail = async options => {
 
   const info = await transporter.sendMail(mailOptions)
 
-  logger.infoLogger(
+  logger.trace(
     `Email sended! Preview URL: ${nodemailer.getTestMessageUrl(info)}`
   )
 }

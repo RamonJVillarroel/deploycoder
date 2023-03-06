@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const dbconfig = require('../../db/config');
 const {HTTPError} = require('../../utils/errors.utils');
-
+const {STATUS}=require('../../utils/api.utils')
 mongoose.set('strictQuery', true);
 
 class MongoContainer{
@@ -26,7 +26,7 @@ class MongoContainer{
         const document = await this.model.findOne({ _id: id }, { __v: 0 })
         if (!document) {
           const message = `Resource with id ${id} not found`
-          throw new HttpError(HTTP_STATUS.NOT_FOUND, message)
+          throw new HTTPError(STATUS.NOT_FOUND, message)
         }
         return document
       }
@@ -43,7 +43,7 @@ class MongoContainer{
         )
         if (!updatedDocument.matchedCount) {
           const message = `Resource with id ${id} does not exists`
-          throw new HTTPError(HTTP_STATUS.NOT_FOUND, message)
+          throw new HTTPError(STATUS.NOT_FOUND, message)
         }
         return updatedDocument
       }
@@ -52,7 +52,7 @@ class MongoContainer{
         const deletedDocument = await this.model.deleteOne({ _id: id })
         if (!deletedDocument.deletedCount) {
           const message = `Resource with id ${id} does not exists`
-          throw new HTTPError(HTTP_STATUS.NOT_FOUND, message)
+          throw new HTTPError(STATUS.NOT_FOUND, message)
         }
         return deletedDocument
       }

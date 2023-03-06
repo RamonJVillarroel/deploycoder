@@ -1,6 +1,6 @@
 const {STATUS, succesResponse} = require('../utils/api.utils');
 const {HTTPError}= require('../utils/errors.utils');
-const sendEmail = require('../utils/email.utils');
+const {sendEmail} = require('../utils/email.utils');
 const UsersDAO = require('../models/daos/users.dao');
 
 const usersDAO = new UsersDAO();
